@@ -57,6 +57,7 @@ public class CalculatorFragment extends Fragment {
                 float distance = Float.parseFloat(distanceEditText.getText().toString());
 
                 float resultValue = (fuelConsumption * distance / 100) * fuelPrice;
+                resultValue = (float) (Math.round(resultValue*100.0)/100.0);
                 resultText.setVisibility(View.VISIBLE);
                 result.setText(resultValue + " zł");
             }
